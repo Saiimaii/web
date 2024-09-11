@@ -43,6 +43,14 @@
             let now = ThaiDateTime(new Date());
             document.getElementById('currentDateTime').innerHTML = now;
         }
+        function toggleColor() {
+            let head = document.getElementById('head');
+            if (head.style.color === 'blue') {
+                head.style.color = ''; // เปลี่ยนกลับเป็นสีเริ่มต้น
+            } else {
+                head.style.color = 'blue'; // เปลี่ยนเป็นสีน้ำเงิน
+            }
+        }
         function DisplayTable(state) {
             document.getElementById('myTable').style.visibility = state;
         } 
@@ -52,7 +60,7 @@
             let n3 = Number.parseInt(document.getElementById('num3').value);
             let r = (n1 + n2 + n3) / 3;
             document.getElementById('result').innerHTML = "ค่าเฉลี่ย    " + r;
-        }   
+        }  
     </script>
 </head>
  
