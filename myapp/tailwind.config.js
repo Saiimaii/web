@@ -5,9 +5,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        Srisakdi: ["Srisakdi"]
-
+        Sarabun: ["Sarabun", "sans-serif"],
+        Prompt: ["Prompt", "sans-serif"],
+        Mitr: ["Mitr", "sans-serif"],
+        Charm: ["Charm"],
+        Handjet: ["Handjet"]
       }
+      
     },
   },
   plugins: [],
