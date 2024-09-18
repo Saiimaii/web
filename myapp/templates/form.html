@@ -1,0 +1,45 @@
+{% extends "_base.html" %}
+{% load static %} 
+
+{% block title %}Form{% endblock %}
+
+{% block content %}
+<div>
+    <form class="max-w-md" onsubmit="return validateForm()">
+        <div>
+            <label for="email" class="block font-semibold">Email</label>
+            <div class="mt-1"><input type="text" name="email" id="email" value="" autofocus="autofocus" class="bg-white shadow-sm ring-0 block w-full text-lg focus:outline-none focus:border-tan-500 border-tan-300 p-2 border-2">
+            <span id ="email-error" class="text-red-600"></span>
+            </div>
+        </div>
+        <div class="mt-6">
+            <div class="flex justify-between">
+                <label for="password" class="block font-semibold">Password</label> 
+                <a href="" tabindex="-1" class="branded-link text-sm font-semibold">Forgot your password?</a>
+            </div>
+            <div class="mt-1">
+                <input type="password" name="password" id="password" class="bg-white shadow-sm ring-0 block w-full text-lg focus:outline-none focus:border-tan-500 border-tan-300 p-2 border-2">
+                <span id ="password-error" class="text-red-600"></span>
+            </div>
+        </div>
+    
+        <label class="mt-8 flex content-start"><input type="checkbox" name="remember" class="mr-2 form-checkbox rounded-none ring-0 focus:border-tan-500 border-tan-300 border-2 w-5 h-5 text-highlight"> 
+          <span class="text-sm font-semibold">Remember me</span>
+          <span id ="checked-status" class="text-red-600"></span>
+        </label>
+        
+        <div>
+            <button class="flex flex-no-wrap mt-6 border-2 border-black bg-yellow-500 py-2 px-4">
+                <span>Sign In</span> 
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 w-6 h-6"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+            </button>
+        </div>
+    </form>
+    <script src="{% static 'js/scripts.js' %}"></script>
+</div>
+
+
+
+{% endblock content %}
