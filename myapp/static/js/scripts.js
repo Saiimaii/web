@@ -30,4 +30,5 @@ function validateForm() {
     }
 
     return isValid;
+    console.log(isValid);
 }
